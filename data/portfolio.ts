@@ -56,9 +56,9 @@ export const experience: ExperienceEntry[] = [
       "Architected heterogeneous folder system supporting diverse study materials — redesigned ORM to accommodate both integer and string-based IDs, created new database schemas, and developed batch migration scripts to move 600M+ records with zero downtime.",
       "Led zero-downtime upgrade of Elasticsearch cluster from v8.11 to v9.2.1, overseeing strategy, documentation, risk mitigation, and vendor coordination; introduced alias-based indexing that unlocked semantic search for ML partners.",
       "Spearheaded migration of core search functionality from a legacy monolith to a scalable Go microservice, reducing operational complexity and enabling independent iteration on search infrastructure.",
-      "Owned course content recommendations in the Hex service — Spanner table design, multi-platform API endpoints for web and native clients, and Datadog monitoring; delivered ahead of schedule.",
-      "Drove the Quizlet Powered Folders (QPF) pipeline: migrated data from BigQuery to Vitess using QBatch scripts, launched 150,000+ curated folders during spring finals with a 37% CTR vs. 20% baseline.",
-      "Course-Powered Folders initiative: +66% canonical school additions, +243% explicit course additions, +77% folder creation.",
+      "Owned course content recommendations in the recommendations service — Spanner table design, multi-platform API endpoints for web and native clients, and Datadog monitoring; delivered ahead of schedule.",
+      "Drove the Quizlet Powered Folders pipeline: migrated curated folder data from BigQuery to Vitess using internal batch tooling, launched a large volume of curated folders during spring finals with a CTR significantly above baseline.",
+      "Course-Powered Folders initiative drove significant growth in canonical school additions, explicit course additions, and folder creation.",
     ],
     tech: ["Go", "Python", "TypeScript", "Django", "FastAPI", "PostgreSQL", "Cloud Spanner", "Elasticsearch", "BigQuery"],
   },
@@ -71,7 +71,7 @@ export const experience: ExperienceEntry[] = [
       "Developed Python/Django API services delivering step-by-step solutions for user-generated questions and textbooks; extended APIs with full backward compatibility across search, ranking, and blended results endpoints.",
       "Drove planning, authored the RFC, and implemented a Python-based misspelling microservice; improved search capabilities by integrating video content indexing into blended search results.",
       "Migrated Search Pages to a new rendering architecture using TypeScript, Next.js, and React.",
-      "Contributed to BTS Tiger Team navigation A/B experiments: +34% Q-Chat engagement, +19% 1-day Q-Chat retention, contributing to a 3.3M search day milestone in Dec 2023.",
+      "Contributed to navigation A/B experiments that drove significant Q-Chat engagement and retention gains, contributing to a record search day milestone in Dec 2023.",
     ],
     tech: ["Python", "TypeScript", "Django", "FastAPI", "Next.js", "React", "PostgreSQL", "Elasticsearch"],
   },
@@ -104,36 +104,36 @@ export const projects: Project[] = [
   {
     title: "Zero-Downtime Folder Migration",
     description:
-      "Designed and executed a batch migration strategy for 600M+ records across the Quizlet folder system. Used dual-write with gradual read ramp-up and Datadog visibility to eliminate any window of inconsistency. Established a migration pattern later adopted by the Teacher-Led Study team.",
-    impact: "600M+ records · zero downtime · cross-team adoption",
+      "Designed and executed a batch migration strategy for 600M+ records across the Quizlet folder system. Used dual-write with gradual read ramp-up and Datadog visibility to eliminate any window of inconsistency. Established a migration pattern later adopted by other engineering teams.",
+    impact: "600M+ records · zero downtime · pattern adopted by other engineering teams",
     tech: ["Go", "Python", "PostgreSQL", "Cloud Spanner", "Datadog"],
   },
   {
     title: "Elasticsearch Cluster Upgrade",
     description:
       "Owned end-to-end upgrade of Quizlet's Elasticsearch cluster from v8.11 to v9.2.1 — a major version with real breaking changes. Introduced alias-based indexing to decouple index management from application logic, enabling semantic search experiments with ML partners.",
-    impact: "Zero traffic downtime · unlocked Vertex AI semantic search",
+    impact: "Zero traffic downtime · unlocked semantic search experiments with ML partners",
     tech: ["Elasticsearch", "Python", "Go", "Datadog"],
   },
   {
     title: "Quizlet Powered Folders Pipeline",
     description:
-      "Built the end-to-end QPF pipeline: migrated curated folder data from BigQuery to Vitess via QBatch scripts, updated APIs for folder differentiation, and added logging for pilot analysis. Timed the launch to the highest-traffic study window of the year.",
-    impact: "150,000+ folders launched · 37% CTR vs. 20% baseline",
+      "Built the end-to-end curated folders pipeline: migrated folder data from BigQuery to Vitess via internal batch tooling, updated APIs for folder differentiation, and added logging for pilot analysis. Timed the launch to the highest-traffic study window of the year.",
+    impact: "Large-scale folder launch · CTR significantly above baseline",
     tech: ["Python", "BigQuery", "Vitess", "Django", "FastAPI"],
   },
   {
     title: "Course Recommendations API",
     description:
-      "Owned the course content recommendations implementation within the Hex service — Spanner table design, multi-platform API endpoints for web and native clients, and Datadog monitoring. Collaborated with the ML team to surface new course recommendation pages.",
-    impact: "+243% explicit course additions · +66% school additions · +77% folder creation",
+      "Owned the course content recommendations implementation within the recommendations service — Spanner table design, multi-platform API endpoints for web and native clients, and Datadog monitoring. Collaborated with the ML team to surface new course recommendation pages.",
+    impact: "Significant growth in explicit course additions, school additions, and folder creation",
     tech: ["Go", "Python", "Cloud Spanner", "FastAPI", "Datadog"],
   },
   {
     title: "Search Microservice Migration",
     description:
       "Spearheaded the technical design and implementation of migrating core search from a legacy Python monolith to a standalone Go microservice. Reduced operational complexity and enabled the Search & Discovery team to iterate independently on search infrastructure.",
-    impact: "Decoupled search from monolith · contributed to 3.3M search day milestone",
+    impact: "Decoupled search from monolith · contributed to a record search day milestone",
     tech: ["Go", "Python", "Elasticsearch", "PostgreSQL"],
   },
   {
